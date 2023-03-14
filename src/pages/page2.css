@@ -91,5 +91,22 @@
     --border-bottom-left-radius: 46px;
     --border-bottom-right-radius: 46px;
 }
+.col-image{
+    transition: transform .2s;
+    
+}
 
-.col-image
+.col-image:hover{
+    transform: scale(1.2);
+}
+
+.continue-btn{
+    text-align: center;
+    --border-radius: 30px;
+    width: 140px;
+    height: 45px;
+}
+
+.btn1{
+    text-align: center;
+}

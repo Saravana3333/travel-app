@@ -1,5 +1,5 @@
 import { IonButton, IonContent, IonHeader, IonInput, IonLabel, IonItem, IonPage, IonTitle, IonCheckbox, IonIcon, IonList, IonText, IonGrid, IonRow, IonCol, IonImg, IonCardHeader } from '@ionic/react';
-import { arrowBackOutline, shareSocialOutline, heartOutline, starSharp } from 'ionicons/icons';
+import { arrowBackOutline, shareSocialOutline, heartOutline, starSharp, arrowForwardOutline } from 'ionicons/icons';
 import { useState } from 'react';
 import { useHistory } from 'react-router';
 import './page2.css';
@@ -44,8 +44,8 @@ const page2: React.FC = () => {
             </IonRow>
 
             <IonRow className='image-grid'>
-              <IonCol>
-                <IonImg className='col-image' src="../assets/images/pic1.png" alt='Image'></IonImg>
+              <IonCol className='col-image'>
+                <IonImg  src="../assets/images/pic1.png" alt='Image'></IonImg>
               </IonCol>
 
               <IonCol>
@@ -64,7 +64,11 @@ const page2: React.FC = () => {
           </IonGrid>
         </IonText>
 
+        <div className="btn1">
+        <IonButton className='continue-btn' color="secondary">Continue<IonIcon slot='end' icon={arrowForwardOutline}></IonIcon></IonButton>
+        </div>
       </IonContent>
+     
     </IonPage>
   );
 };
