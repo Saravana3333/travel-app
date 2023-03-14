@@ -1,0 +1,26 @@
+.ion-contact-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ion-in-box{
+    margin: auto;
+    width: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.inputbox-submit{
+    width: 60%;
+}
+
+.list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ion-btn-color{
+    --border-radius: 30px;
+}
