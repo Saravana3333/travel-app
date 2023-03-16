@@ -1,13 +1,5 @@
 .background-img {
     --background: url("../../public/assets/images/backmain.png") 0 0 /100% 50% no-repeat;
-    /* --background-image: url("../../public/assets/images/backmain.png");
-    --background-repeat: no-repeat;
-    --background-size: 100% 100%; */
-}
-
-.ion-head {
-    --background-color: transparent;
-    --ion-color-base: transparent !important;
 }
 
 .bali-content {
@@ -23,7 +15,7 @@
     line-height: 51px;
 }
 
-.bali-content>h5 {
+.bali-content>p {
     color: black;
     background: #ffffff;
     border-radius: 20px;
@@ -49,10 +41,10 @@
     border-top-right-radius: 40px;
 }
 
-.title-grid>h5 {
+.col-text{
     font-family: 'Poppins';
-    font-weight: 500;
-    font-size: 14px;
+    font-weight:600;
+    font-size: 16px;
     line-height: 20px;
     letter-spacing: 0.1px;
 }
@@ -74,9 +66,9 @@
 }
 
 .ion-paragraph {
-    color: black;
+    color: #625B71;
     line-height: 1.5;
-    text-align: left;
+    font-size: 16px;
 }
 
 .ion-background {
@@ -92,7 +84,7 @@
     --border-bottom-right-radius: 46px;
 }
 .col-image{
-    transition: transform .2s;
+    transition: transform 0.2s;
     
 }
 
@@ -101,12 +93,14 @@
 }
 
 .continue-btn{
-    text-align: center;
+    --background:#3dc2ff;
+    text-transform: none;
     --border-radius: 30px;
     width: 140px;
     height: 45px;
+    
 }
 
-.btn1{
-    text-align: center;
+.continue-btn:hover{
+    --background: #625B71;
 }

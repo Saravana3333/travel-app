@@ -4,6 +4,7 @@ import { IonReactRouter } from '@ionic/react-router';
 import Home from './pages/Home';
 import Page1 from './pages/page1';
 import Page2 from './pages/page2';
+import Page3 from './pages/page3';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -23,7 +24,7 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
-import { shieldHalfOutline, logoUsd, logoMastodon, logoEuro, search, homeOutline, locationOutline, personOutline } from 'ionicons/icons';
+import { search, homeOutline, locationOutline, personOutline } from 'ionicons/icons';
 
 setupIonicReact();
 
@@ -42,6 +43,10 @@ const App: React.FC = () => (
 
         <Route exact path="/page2">
           <Page2 />
+        </Route>
+        
+        <Route exact path="/page3">
+          <Page3 />
         </Route>
         
         <Route exact path="/">
