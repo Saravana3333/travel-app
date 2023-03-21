@@ -9,6 +9,7 @@ const Page1: React.FC = () => {
   const history = useHistory()
   
   const [count, setCount] = useState(0)
+
   return (
     <IonPage>
       <IonHeader>

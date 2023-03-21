@@ -21,13 +21,13 @@
     border-radius: 20px;
     height: 35px;
     padding-top: 6px;
-    max-width: 90px;
+    max-width: 80px;
     margin-left: 40%;
     font-weight: 600;
 }
 
-.text-grid{
-    margin-left: 6%;
+.text-grid {
+    margin-left: 4%;
 }
 
 .title-grid {
@@ -41,12 +41,18 @@
     border-top-right-radius: 40px;
 }
 
-.col-text{
+.col-text {
     font-family: 'Poppins';
-    font-weight:600;
     font-size: 16px;
     line-height: 20px;
     letter-spacing: 0.1px;
+}
+
+.text-selected {
+    background: #C9D4E4;
+    border-radius: 40px;
+    font-weight: 700;
+    padding: 15px;
 }
 
 .ion-icon {
@@ -69,6 +75,7 @@
     color: #625B71;
     line-height: 1.5;
     font-size: 16px;
+    text-align: left;
 }
 
 .ion-background {
@@ -83,24 +90,27 @@
     --border-bottom-left-radius: 46px;
     --border-bottom-right-radius: 46px;
 }
-.col-image{
+
+.col-image {
     transition: transform 0.2s;
-    
+
 }
 
-.col-image:hover{
+.col-image:hover {
     transform: scale(1.2);
 }
 
-.continue-btn{
-    --background:#3dc2ff;
+.continue-btn {
+    --background: #3dc2ff;
     text-transform: none;
     --border-radius: 30px;
     width: 140px;
     height: 45px;
-    
+
 }
 
-.continue-btn:hover{
+.continue-btn:hover {
     --background: #625B71;
 }
+
+
