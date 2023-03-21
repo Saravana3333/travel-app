@@ -17,9 +17,9 @@
   line-height: 30px;
 }
 
-ion-img::part(image) {
-  border-bottom-left-radius: 40px; 
-  border-bottom-right-radius: 40px;
+.background-image::part(image) {
+  border-bottom-left-radius: 30px; 
+  border-bottom-right-radius: 30px;
 }
 
 /* .background4-image

@@ -36,8 +36,8 @@ const Page3: React.FC = () => {
                     <SwiperSlide><IonImg className='background-image' src="../assets/images/background1.png" alt='Image'></IonImg></SwiperSlide>
                     <SwiperSlide><IonImg className='background-image' src="../assets/images/background2.jpg" alt='Image'></IonImg></SwiperSlide>
                     <SwiperSlide><IonImg className='background-image' src="../assets/images/background3.png" alt='Image'></IonImg></SwiperSlide>
-                    <SwiperSlide><IonImg className='background4-image' src="../assets/images/background4.jpg" alt='Image'></IonImg></SwiperSlide>
-                    <SwiperSlide><IonImg className='background5-image' src="../assets/images/background5.jpg" alt='Image'></IonImg></SwiperSlide>
+                    <SwiperSlide><IonImg className='background-image' src="../assets/images/background4.jpg" alt='Image'></IonImg></SwiperSlide>
+                    <SwiperSlide><IonImg className='background-image' src="../assets/images/background5.jpg" alt='Image'></IonImg></SwiperSlide>
                 </Swiper>
 
 
@@ -55,7 +55,7 @@ const Page3: React.FC = () => {
                     </IonGrid>
                 </IonText>
 
-                <IonItem>
+                <IonItem lines='none'>
                     <IonButton className='details-btn' color="secondary">Details</IonButton>
                     <IonButton className='reviews-btn reviews-btn1' color="light">Reviews</IonButton>
                 </IonItem>

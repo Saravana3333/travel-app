@@ -10,8 +10,11 @@ const Page1: React.FC = () => {
   
   const [count, setCount] = useState(0)
  
-  const location = useLocation<{name:string}>()
-  const name = location?.state?.['name']
+  // const location = useLocation<{name:string}>()
+  const name =JSON.parse(localStorage.getItem('myObject') as any)
+  
+  
+  // const name = location?.state?.['name']
   return (
     <IonPage>
       <IonHeader>

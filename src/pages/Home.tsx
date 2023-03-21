@@ -8,12 +8,17 @@ const Home: React.FC = () => {
 
   const history = useHistory()
 
-  const [name, setName] = useState("");
+  const [name, setName] = useState('');
   const handleChange = (e:any) => {
     e.preventDefault();
     console.log(name);
   }
-
+ const onClick=()=>{
+  localStorage.setItem("myObject", JSON.stringify(name));
+  history.push('/page1',{
+    name
+ })
+}
   return (
     <IonPage>
       <IonContent className='ion-contact-info'>
@@ -30,10 +35,7 @@ const Home: React.FC = () => {
           ></IonInput>
         </IonItem>
         <p className='ion-text-center'>
-          <IonButton className="ion-btn-color" onClick={() => {
-                history.push('/page1',{
-                  name
-                })}}>Submit</IonButton>
+          <IonButton className="ion-btn-color" onClick={onClick}>Submit</IonButton>
         </p>
       </IonContent>
     </IonPage>
