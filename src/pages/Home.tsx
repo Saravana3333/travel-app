@@ -25,6 +25,7 @@ const Home: React.FC = () => {
             name="name"
             value={name}
             onIonChange={(e)=>setName(e.target.value as unknown as string)}
+            required={true}
             placeholder="Enter your Name..."
           ></IonInput>
         </IonItem>

@@ -1,13 +1,10 @@
-import { IonButton, IonContent, IonHeader, IonInput, IonLabel, IonItem, IonPage, IonItemDivider, IonCheckbox, IonIcon, IonList, IonText, IonGrid, IonRow, IonCol, IonImg, IonCardHeader } from '@ionic/react';
-import { arrowBackOutline, calendarClearOutline, menuSharp, starSharp, arrowForwardOutline, locationSharp } from 'ionicons/icons';
-import { useState } from 'react';
+import { IonButton, IonContent, IonHeader, IonItem, IonPage, IonItemDivider, IonCheckbox, IonIcon, IonList, IonText, IonGrid, IonRow, IonCol, IonImg, IonCardHeader } from '@ionic/react';
+import { arrowBackOutline, calendarClearOutline, menuSharp, starSharp, arrowForwardOutline, locationSharp, chevronBackCircle } from 'ionicons/icons';
+import { useRef, useState } from 'react';
 import { useHistory } from 'react-router';
 import './page3.css';
 import 'swiper/swiper.min.css';
-import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
-// import "swiper/css";
+import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import { Autoplay, Keyboard, Pagination, Scrollbar, Zoom } from 'swiper';
 
 
@@ -15,6 +12,7 @@ import { Autoplay, Keyboard, Pagination, Scrollbar, Zoom } from 'swiper';
 const Page3: React.FC = () => {
 
     const history = useHistory()
+    const mySlides = useRef(null);
     const navigate = () => {
         history.push('./page2')
     }
@@ -29,18 +27,19 @@ const Page3: React.FC = () => {
             </IonHeader>
 
             <IonContent>
+                <Swiper modules={[Autoplay, Keyboard, Pagination, Scrollbar, Zoom]}
+                    autoplay={true}
+                    keyboard={true}
+                    pagination={true}
+                    scrollbar={true}
+                    zoom={true}>
+                    <SwiperSlide><IonImg className='background-image' src="../assets/images/background1.png" alt='Image'></IonImg></SwiperSlide>
+                    <SwiperSlide><IonImg className='background-image' src="../assets/images/background2.jpg" alt='Image'></IonImg></SwiperSlide>
+                    <SwiperSlide><IonImg className='background-image' src="../assets/images/background3.png" alt='Image'></IonImg></SwiperSlide>
+                    <SwiperSlide><IonImg className='background4-image' src="../assets/images/background4.jpg" alt='Image'></IonImg></SwiperSlide>
+                    <SwiperSlide><IonImg className='background5-image' src="../assets/images/background5.jpg" alt='Image'></IonImg></SwiperSlide>
+                </Swiper>
 
-            <Swiper  modules={[Autoplay, Keyboard, Pagination, Scrollbar, Zoom]}
-          autoplay={true}
-          keyboard={true}
-          pagination={true}
-          scrollbar={true}
-          zoom={true}>
-          <SwiperSlide>Slide 1</SwiperSlide>
-          <SwiperSlide>Slide 2</SwiperSlide>
-          <SwiperSlide>Slide 3</SwiperSlide>
-        </Swiper>
-                <IonImg className='background-image' src="../assets/images/background3.png" alt='Image'></IonImg>
 
                 <IonText>
                     <IonGrid>

@@ -17,10 +17,16 @@
   line-height: 30px;
 }
 
-.background-image {
-  --border-bottom-left-radius: 40px;
-  --border-bottom-right-radius: 40px;
+ion-img::part(image) {
+  border-bottom-left-radius: 40px; 
+  border-bottom-right-radius: 40px;
 }
+
+/* .background4-image
+{
+  width: 90px;
+  height: 150px;
+} */
 
 .col-text1 {
   font-weight: 600;
