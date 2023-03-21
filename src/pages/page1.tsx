@@ -1,7 +1,7 @@
 import { IonAvatar, IonContent, IonHeader, IonIcon, IonItem, IonCardContent, IonPage, IonText, IonSearchbar, IonTabBar, IonToolbar, IonProgressBar, IonCard, IonThumbnail, IonButton, IonImg, IonRow, IonGrid, } from '@ionic/react';
 import { notificationsOutline, calendarClearOutline, people, add, remove } from 'ionicons/icons';
 import { useState } from 'react';
-import { useHistory } from 'react-router';
+import { useHistory, useLocation } from 'react-router';
 import './page1.css';
 
 const Page1: React.FC = () => {
@@ -9,7 +9,9 @@ const Page1: React.FC = () => {
   const history = useHistory()
   
   const [count, setCount] = useState(0)
-
+ 
+  const location = useLocation<{name:string}>()
+  const name = location?.state?.['name']
   return (
     <IonPage>
       <IonHeader>
@@ -18,7 +20,7 @@ const Page1: React.FC = () => {
             <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" width="50%" height="80%" />
           </IonAvatar>
           <IonText className='hello-txt'>
-            <h4>Hello,</h4></IonText>
+            <h4>Hello,{name}</h4></IonText>
           <IonIcon slot="end" className="noti-icon" icon={notificationsOutline}></IonIcon>
         </IonItem>
       </IonHeader>
