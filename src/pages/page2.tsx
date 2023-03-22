@@ -1,4 +1,4 @@
-import { IonButton, IonContent, IonHeader, IonInput, IonLabel, IonItem, IonPage, IonTitle, IonCheckbox, IonIcon, IonList, IonText, IonGrid, IonRow, IonCol, IonImg, IonCardHeader, IonChip } from '@ionic/react';
+import { IonButton, IonContent, IonHeader, IonInput, IonLabel, IonItem, IonPage, IonTitle, IonCheckbox, IonIcon, IonList, IonText, IonGrid, IonRow, IonCol, IonImg, IonCardHeader, IonChip, useIonLoading } from '@ionic/react';
 import { arrowBackOutline, shareSocialOutline, heartOutline, starSharp, arrowForwardOutline } from 'ionicons/icons';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
@@ -16,6 +16,7 @@ const Page2: React.FC = () => {
   const [type, setType] = useState('Hotel');
 
   console.log(type)
+  const [present, dismiss] = useIonLoading();
   return (
     <IonPage>
       <IonContent className='background-img'>
@@ -112,12 +113,15 @@ const Page2: React.FC = () => {
                 </IonGrid></>
             ) : null}
           </IonGrid>
-
         </IonText>
 
         <p className="ion-text-center">
           <IonButton className='continue-btn' onClick={() => {
-            history.push('/page3')
+            history.push('/page3'),present({
+              message: 'Loading...',
+              duration: 1000,
+              spinner: 'circles'
+            })
           }}>Continue<IonIcon slot='end' icon={arrowForwardOutline}></IonIcon></IonButton>
         </p>
     

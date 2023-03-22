@@ -1,4 +1,4 @@
-import { IonAvatar, IonContent, IonHeader, IonIcon, IonItem, IonCardContent, IonPage, IonText, IonSearchbar, IonTabBar, IonToolbar, IonProgressBar, IonCard, IonThumbnail, IonButton, IonImg, IonRow, IonGrid, } from '@ionic/react';
+import { IonAvatar, IonContent, IonHeader, IonIcon, IonItem, IonCardContent, IonPage, IonText, IonSearchbar, IonTabBar, IonToolbar, IonProgressBar, IonCard, IonThumbnail, IonButton, IonImg, IonRow, IonGrid, IonRefresher, IonRefresherContent, RefresherEventDetail, } from '@ionic/react';
 import { notificationsOutline, calendarClearOutline, people, add, remove } from 'ionicons/icons';
 import { useState } from 'react';
 import { useHistory, useLocation } from 'react-router';
@@ -12,9 +12,14 @@ const Page1: React.FC = () => {
  
   // const location = useLocation<{name:string}>()
   const name =JSON.parse(localStorage.getItem('myObject') as any)
-  
-  
   // const name = location?.state?.['name']
+  
+  function handleRefresh(event: CustomEvent<RefresherEventDetail>) {
+    setTimeout(() => {
+      // Any calls to load data go here
+      event.detail.complete();
+    }, 2000);
+  }
   return (
     <IonPage>
       <IonHeader>
@@ -29,6 +34,9 @@ const Page1: React.FC = () => {
       </IonHeader>
       
       <IonContent fullscreen color="tertiary">
+      <IonRefresher slot="fixed" onIonRefresh={handleRefresh}>
+          <IonRefresherContent></IonRefresherContent>
+        </IonRefresher>
         <IonItem lines="none" className='search-cont' color="tertiary">
           <IonSearchbar placeholder="Location"></IonSearchbar>
         </IonItem>

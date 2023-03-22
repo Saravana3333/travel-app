@@ -1,5 +1,5 @@
 .ion-contact-info{
-    --background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url("../../public/assets/images/back-image.jpg") no-repeat center / cover;
+    --background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url("../../public/assets/images/back-image.jpg") no-repeat center / cover fixed;
 }
 
 .ion-in-box{
